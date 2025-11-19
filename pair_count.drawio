@@ -1,0 +1,196 @@
+<mxfile host="app.diagrams.net" modified="2025-11-19T20:05:00.000Z" agent="7.0 (Linux)" version="24.7.8" type="device">
+  <diagram id="pair-count" name="pair count logic">
+    <mxGraphModel dx="1280" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Inputs -->
+        <mxCell id="A3" value="A3" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="A2" value="A2" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="20" y="140" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="A1" value="A1" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="A0" value="A0" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="20" y="300" width="60" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Parity XOR chain -->
+        <mxCell id="P0" value="XOR" style="shape=mxgraph.logic.gate.xor;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P1" value="XOR" style="shape=mxgraph.logic.gate.xor;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="260" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ParityXOR" value="XOR" style="shape=mxgraph.logic.gate.xor;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="170" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ParityInv" value="NOT" style="shape=mxgraph.logic.gate.not;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="190" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ValidLbl" value="Valid" style="rounded=1;whiteSpace=wrap;html=1;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="190" width="70" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Pair XORs -->
+        <mxCell id="X2" value="XOR" style="shape=mxgraph.logic.gate.xor;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="140" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X1" value="XOR" style="shape=mxgraph.logic.gate.xor;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="220" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0" value="XOR" style="shape=mxgraph.logic.gate.xor;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="300" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- First adder stage -->
+        <mxCell id="S10" value="XOR" style="shape=mxgraph.logic.gate.xor;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="260" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C10" value="AND" style="shape=mxgraph.logic.gate.and2;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="320" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Second stage -->
+        <mxCell id="SumX" value="XOR" style="shape=mxgraph.logic.gate.xor;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="300" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Cadd" value="AND" style="shape=mxgraph.logic.gate.and2;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="360" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CarryOr" value="OR" style="shape=mxgraph.logic.gate.or;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="350" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Masked outputs -->
+        <mxCell id="C0and" value="AND" style="shape=mxgraph.logic.gate.and2;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="280" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C1and" value="AND" style="shape=mxgraph.logic.gate.and2;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="360" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OUTC0" value="C0" style="rounded=1;whiteSpace=wrap;html=1;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="290" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OUTC1" value="C1" style="rounded=1;whiteSpace=wrap;html=1;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="370" width="60" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Edges: parity block -->
+        <mxCell id="e1" edge="1" source="A3" target="P0" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" source="A2" target="P0" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" source="A1" target="P1" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" source="A0" target="P1" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" source="P0" target="ParityXOR" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" source="P1" target="ParityXOR" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" source="ParityXOR" target="ParityInv" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" source="ParityInv" target="ValidLbl" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edges: pair XORs -->
+        <mxCell id="e9" edge="1" source="A3" target="X2" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" source="A2" target="X2" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" source="A2" target="X1" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" source="A1" target="X1" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" source="A1" target="X0" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" source="A0" target="X0" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Adder wiring -->
+        <mxCell id="e15" edge="1" source="X2" target="S10" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" source="X1" target="S10" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" source="X2" target="C10" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" source="X1" target="C10" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e19" edge="1" source="S10" target="SumX" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" edge="1" source="X0" target="SumX" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" source="S10" target="Cadd" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" edge="1" source="X0" target="Cadd" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e23" edge="1" source="C10" target="CarryOr" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" edge="1" source="Cadd" target="CarryOr" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Output masks -->
+        <mxCell id="e25" edge="1" source="SumX" target="C0and" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e26" edge="1" source="CarryOr" target="C1and" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e27" edge="1" source="ValidLbl" target="C0and" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e28" edge="1" source="ValidLbl" target="C1and" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="260" />
+              <mxPoint x="470" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e29" edge="1" source="C0and" target="OUTC0" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e30" edge="1" source="C1and" target="OUTC1" style="endArrow=classic;html=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
